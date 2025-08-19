@@ -64,7 +64,6 @@ jobs:
         ssh-keyscan github.com >> ~/.ssh/known_hosts
     - name: SSH to server and execute commands
         run: ssh user@hostname 'ls'
-  
 
     - name: Load custom feeds
       run: |
