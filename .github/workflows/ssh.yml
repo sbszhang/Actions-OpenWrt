@@ -1,8 +1,8 @@
-- name: Install SSH key
-  run: |
+name: Install SSH key
+  run:
     mkdir -p ~/.ssh/
     echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
     chmod 600 ~/.ssh/id_rsa
     ssh-keyscan github.com >> ~/.ssh/known_hosts
-- name: SSH to server and execute commands
+  name: SSH to server and execute commands
   run: ssh user@hostname 'ls'
